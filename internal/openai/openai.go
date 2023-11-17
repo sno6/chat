@@ -26,7 +26,7 @@ type Service struct {
 func NewService(key string, model Model) Service {
 	return Service{
 		c: &http.Client{
-			Timeout: 30 * time.Second,
+			Timeout: 2 * time.Minute,
 		},
 		model: model,
 		key:   key,
